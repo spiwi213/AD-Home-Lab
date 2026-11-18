@@ -1,3 +1,4 @@
+<img width="896" height="888" alt="Screenshot 2026-11-17 134948" src="https://github.com/user-attachments/assets/0aa7fcac-0a6c-4be2-89c5-e6a66bea5cf5" />
 # Active Directory Home Lab
 
 ## Overview
@@ -81,6 +82,21 @@ I learned how Active directory works on a Home Lab project. his project taught m
 *Figure 10: CLIENT01 (Windows 11) joined to the `corp.lab` domain.*
 <img width="878" height="695" alt="Screenshot 2026-11-16 164006" src="https://github.com/user-attachments/assets/8678ff2e-4469-46d0-a78a-9466629aaeeb" />
 
-![HR user logged in with the H: drive](screenshots/11-hr-user-h-drive.png)
 *Figure 11: Maria (HR) logs in on CLIENT01 and sees her department's H: drive.*
+<img width="896" height="888" alt="Screenshot 2026-11-17 134948" src="https://github.com/user-attachments/assets/3838a690-362a-479b-85d3-df35ba502ae2" />
 
+![IT user logged in with the I: drive](screenshots/12-it-user-i-drive.png)
+*Figure 12: Juan (IT) sees only the I: drive for his department.*
+<img width="952" height="917" alt="Screenshot 2026-11-17 135337" src="https://github.com/user-attachments/assets/542f9748-dfa3-4c6b-81a1-e772ea8a131e" />
+
+![Sales user logged in with the S: drive](screenshots/13-sales-user-s-drive.png)
+*Figure 13: Pedro (Sales) sees only the S: drive for his department.*
+<img width="930" height="908" alt="Screenshot 2026-11-17 134113" src="https://github.com/user-attachments/assets/5e9558e5-5ef7-4671-8127-dc0ff28f7ca2" />
+
+![Access denied error](screenshots/14-access-denied.png)
+*Figure 14: An IT user is denied access to the HR share, confirming that permissions work.*
+<img width="937" height="798" alt="Screenshot 2026-11-17 135819" src="https://github.com/user-attachments/assets/e02db50e-91a4-4ed6-8145-85d7e001390d" />
+
+![Reset Password window in ADUC](screenshots/15-password-reset.png)
+*Figure 15: Password reset and account unlock in Active Directory Users and Computers.*
+<img width="920" height="833" alt="Screenshot 2026-11-17 135719" src="https://github.com/user-attachments/assets/c49074ef-09ee-44cf-8fae-d90139dea6fc" />
