@@ -34,10 +34,15 @@ Domain: `corp.lab`. The NAT adapter gives DC01 internet access. The internal net
 
 ## Problems I Hit and How I Fixed Them
 |Problem | Cause | Fix | 
-|One network adapter at first | Not enable Adapter 2 on (internal network) in Virtual Box | Shutdown the VM then enable Adapter 2 as a Labnet the have a static IP 192.168.10.10 in LAB adapter |Cannot change password Maria's acc. (
+- |One network adapter at first | Not enable Adapter 2 on (internal network) in Virtual Box | Shutdown the VM then enable Adapter 2 as a Labnet the have a static IP 192.168.10.10 in LAB adapter | 
+- |Cannot change password Maria's acc. ("unable to update password") | Did not meet the length password policy | Reset password in DC01 using a long password |
+- | shared H:drive is not showing on Maria's account | typo error on DC01 \\DC01\HR1 instead of \\DC01\HR | rename it in GPO as \\DC01\HR then in client01 i use gpupdate /force, sign out and in |
+- | Password is incorrect on juan's account | typo or wrong password | Reset his password on ADUC |
 
 ## What I Learned
-
+I learned how Active directory works on a Home Lab project. his project taught me how a company onboards an employee in Active Directory: create the account, add it to a department group, and give access only to that department’s folder. I learned that share permissions and NTFS permissions work together, and that the stricter one wins. I also learned that most domain problems start with DNS, and that tools like gpresult /r and ping help find where a problem actually is. Fixing a typo in a GPO path taught me to verify each layer (policy applied, path correct, permissions) instead of guessing.
 
 ## Screenshots
-(01 to 15, with one-line captions.)
+![VirtualBox Manager showing the DC01 and CLIENT01 virtual machines](screenshots/01-virtualbox.png)
+*Figure 1: The two virtual machines in the lab: DC01 (Windows Server 2022, domain controller) and CLIENT01 (Windows 11, domain-joined client).*
+<img width="1915" height="962" alt="Screenshot 2026-11-16 162850" src="https://github.com/user-attachments/assets/21badb70-d581-4919-8dea-31cb37de796e" />
