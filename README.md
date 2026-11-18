@@ -46,3 +46,41 @@ I learned how Active directory works on a Home Lab project. his project taught m
 ![VirtualBox Manager showing the DC01 and CLIENT01 virtual machines](screenshots/01-virtualbox.png)
 *Figure 1: The two virtual machines in the lab: DC01 (Windows Server 2022, domain controller) and CLIENT01 (Windows 11, domain-joined client).*
 <img width="1915" height="962" alt="Screenshot 2026-11-16 162850" src="https://github.com/user-attachments/assets/21badb70-d581-4919-8dea-31cb37de796e" />
+
+![DC01 network adapters in VirtualBox](screenshots/02-dc01-network-settings.png)
+*Figure 2: DC01 has two adapters: NAT for internet access and an internal network (`labnet`) for domain traffic.*<img width="902" height="730" alt="Screenshot 2026-11-16 163226" src="https://github.com/user-attachments/assets/7fe02d76-fe6e-4e34-ba7f-556e9b8ba02b" />
+
+![ipconfig /all output on DC01](screenshots/03-dc01-ipconfig.png)
+*Figure 3: DC01 uses the static IP 192.168.10.10 on the lab network, with its own address as the DNS server.*
+<img width="1527" height="887" alt="Screenshot 2026-11-16 163313" src="https://github.com/user-attachments/assets/3219e5cf-bc86-472b-bae2-a3e4bea9d991" />
+
+![Get-ADDomain output](screenshots/04-get-addomain.png)
+*Figure 4: `Get-ADDomain` confirms the `corp.lab` domain is running on DC01.*
+<img width="935" height="830" alt="Screenshot 2026-11-16 163420" src="https://github.com/user-attachments/assets/2404c2ec-ba79-4da0-8058-52608153db5a" />
+
+![OU structure in Active Directory Users and Computers](screenshots/05-ou-structure.png)
+*Figure 5: The OU structure: a parent OU (Corp) with IT, HR, and Sales departments.*
+<img width="918" height="781" alt="Screenshot 2026-11-16 163515" src="https://github.com/user-attachments/assets/7782d46e-6429-4d83-8640-4cf30a4a88a8" />
+
+![Users and security groups in ADUC](screenshots/06-users-and-groups.png)
+*Figure 6: Each department has its own user account and security group (GG-IT, GG-HR, GG-Sales).*
+<img width="870" height="661" alt="Screenshot 2026-11-16 163547" src="https://github.com/user-attachments/assets/d0a3a290-62cb-4c0e-89f6-2ed0bb280902" />
+
+![Get-SmbShare output](screenshots/07-smb-shares.png)
+*Figure 7: Three SMB shares (HR, IT, Sales) published from `C:\Shares`.*<img width="933" height="668" alt="Screenshot 2026-11-16 163622" src="https://github.com/user-attachments/assets/c332fd1b-349d-4478-a0b3-78c700c0a348" />
+
+![icacls output for the HR folder](screenshots/08-ntfs-permissions.png)
+*Figure 8: NTFS permissions on the HR folder allow only the HR group and administrators.*
+<img width="963" height="693" alt="Screenshot 2026-11-16 163807" src="https://github.com/user-attachments/assets/6ae0d06f-ec86-418f-aabe-d70dd73242ee" />
+
+![Group Policy Management showing the drive map GPO](screenshots/09-gpo-drive-map.png)
+*Figure 9: A Group Policy linked to the HR OU maps `\\DC01\HR` as drive H:.*
+<img width="897" height="663" alt="Screenshot 2026-11-16 163915" src="https://github.com/user-attachments/assets/70128c71-ccb6-4c9a-8a4e-9eb77c2e3be1" />
+
+![System properties showing domain membership](screenshots/10-client-domain-join.png)
+*Figure 10: CLIENT01 (Windows 11) joined to the `corp.lab` domain.*
+<img width="878" height="695" alt="Screenshot 2026-11-16 164006" src="https://github.com/user-attachments/assets/8678ff2e-4469-46d0-a78a-9466629aaeeb" />
+
+![HR user logged in with the H: drive](screenshots/11-hr-user-h-drive.png)
+*Figure 11: Maria (HR) logs in on CLIENT01 and sees her department's H: drive.*
+
