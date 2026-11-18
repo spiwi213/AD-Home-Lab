@@ -1,4 +1,3 @@
-<img width="896" height="888" alt="Screenshot 2026-11-17 134948" src="https://github.com/user-attachments/assets/0aa7fcac-0a6c-4be2-89c5-e6a66bea5cf5" />
 # Active Directory Home Lab
 
 ## Overview
